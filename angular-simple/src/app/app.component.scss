@@ -1,3 +1,15 @@
+/* HTML5 display-role reset for older browsers */
+// article, aside, details, figcaption, figure, 
+// footer, header, hgroup, menu, nav, section {
+//     display: block;
+// }
+
+.mainContainer {
+  border: 1px solid red;
+  position: relative;
+  top: 150px;
+}
+
 p {
-    font-family: Lato;
-  }
+  font-family: Lato;
+}

@@ -4,6 +4,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { NavbarFixedComponent } from './core/navbar-fixed/navbar-fixed.component';
 import { ChildComponent } from './emittest/child/child.component';
 import { FormsModule } from '@angular/forms';
 import { LoadingStencilModule } from './loading-stencil/loading-stencil.module';
@@ -20,6 +21,7 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
   declarations: [
     AppComponent,
     ChildComponent,
+    NavbarFixedComponent,
     TranslationTestComponent
   ],
   imports: [

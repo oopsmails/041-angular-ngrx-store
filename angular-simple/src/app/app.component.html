@@ -1,20 +1,22 @@
-<p>
-  {{result}}
-</p>
-<button (click)="start()">start</button>
-<button (click)="end()">end</button>
+<navbar-fixed></navbar-fixed>
+<div class="mainContainer">
+  <p>
+    {{result}}
+  </p>
+  <button (click)="start()">start</button>
+  <button (click)="end()">end</button>
 
-<p>
-  <span><b>Value emitted from child component is to Parent:</b></span>
-  
-  {{ valueEmittedFromChildComponent }}
+  <p>
+    <span><b>Value emitted from child component is to Parent:</b></span>
 
-  <app-child (buttonClicked)="parentEventHandlerFunction($event)">
-  </app-child>
-</p>
+    {{ valueEmittedFromChildComponent }}
 
-<button (click)="navToPage(navRoutes.LOADING_STENCIL_ROUTES_ROOT_SIMPLE)">Test Loading</button>
+    <app-child (buttonClicked)="parentEventHandlerFunction($event)">
+    </app-child>
+  </p>
 
-<a routerLink="">routerLink home</a>
+  <button (click)="navToPage(navRoutes.LOADING_STENCIL_ROUTES_ROOT_SIMPLE)">Test Loading</button>
 
+  <a routerLink="">routerLink home</a>
+</div>
 <router-outlet></router-outlet>
