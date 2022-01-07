@@ -67,51 +67,86 @@ nav {
   transform: scale(1, 0);
   transform-origin: top;
   transition: transform 250ms ease-in-out;
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  li {
+    margin-bottom: $nav-item-margin-bottom;
+    margin-left: $hamburger-margin-left;
+  }
+
+  a {
+    color: white;
+    text-decoration: none;
+    font-size: $nav-a-font-size;
+    text-transform: uppercase;
+    opacity: 0;
+    transition: opacity 150ms ease-in-out;
+  }
+
+  a:hover {
+    color: #000;
+  }
 }
 
-nav ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-nav li {
-  margin-bottom: 1em;
-  margin-left: $hamburger-margin-left;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-  font-size: 1.2rem;
-  text-transform: uppercase;
-  opacity: 0;
-  transition: opacity 150ms ease-in-out;
-}
-
-nav a:hover {
-  color: #000;
-}
 
 .nav-toggle:checked~nav {
   transform: scale(1, 1);
+
+  a {
+    opacity: 1;
+    transition: opacity 250ms ease-in-out 250ms;
+  }
 }
 
-.nav-toggle:checked~nav a {
-  opacity: 1;
-  transition: opacity 250ms ease-in-out 250ms;
-}
-
+// GOTO ///////////////////////////
 .goto-toggle {
   display: none;
 }
 
 .goto-toggle-label {
-  display: block;
+  color: white;
+  text-decoration: none;
+  font-size: $nav-a-font-size;
 }
 
-.navbar-goto-li {
-  background: $nav-background;
+.navbar-goto-li-angle-down {
+  color: white;
+  margin-left: 10px;
+}
+
+.navbar-goto-li-ul {
+  border: 1px solid yellow;
+  margin-left: $hamburger-margin-left;
+  font-size: $nav-a-font-size;
+  text-align: left;
+  width: 100%;
+  transform-origin: top;
+  transition: transform 250ms ease-in-out;
+  margin-top: $nav-item-margin-bottom !important;
+  padding: 0;
+  list-style: none;
+  transform: scale(1, 0);
+  display: none;
+
+  a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    text-transform: uppercase;
+    opacity: 0;
+    transition: opacity 150ms ease-in-out;
+  }
+
+}
+
+.goto-toggle:checked~ul {
+  display: block;
+  transform: scale(1, 1);
 }
 
 // 02: Bigger size
