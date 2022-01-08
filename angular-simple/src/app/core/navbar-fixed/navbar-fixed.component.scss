@@ -1,5 +1,3 @@
-// @import '/src/assets/scss/_variables.scss';
-
 * {
   margin: 0;
   padding: 0;
@@ -11,7 +9,6 @@
 
 // 01: Global variables are defined in '/src/assets/scss/_variables.scss'
 .header-div {
-  // background: $nav-background;
   background: var(--nav-background);
   text-align: center;
   position: fixed;
@@ -27,7 +24,6 @@
   position: absolute;
   top: 0;
   left: 0;
-  // margin-left: $hamburger-margin-left;
   margin-left: var(--hamburger-margin-left);
   height: 100%;
   display: flex;
@@ -64,7 +60,6 @@ nav {
   text-align: left;
   top: 100%;
   left: 0;
-  // background: $nav-background;
   background: var(--nav-background);
   width: 100%;
   transform: scale(1, 0);
@@ -78,8 +73,6 @@ nav {
   }
 
   li {
-    // margin-bottom: $nav-item-margin-bottom;
-    // margin-left: $hamburger-margin-left;
     margin-bottom: var(--nav-item-margin-bottom);
     margin-left: var(--hamburger-margin-left);
   }
@@ -87,7 +80,6 @@ nav {
   a {
     color: white;
     text-decoration: none;
-    // font-size: $nav-a-font-size;
     font-size: var(--nav-a-font-size);
     text-transform: uppercase;
     opacity: 0;
@@ -116,8 +108,6 @@ nav {
 
 .goto-toggle-label {
   color: white;
-  // text-decoration: none;
-  // font-size: $nav-a-font-size;
 }
 
 .navbar-goto-li-angle-down {
@@ -127,15 +117,12 @@ nav {
 
 .navbar-goto-li-ul {
   border: 1px solid yellow;
-  // margin-left: $hamburger-margin-left;
-  // font-size: $nav-a-font-size;
   margin-left: var(--hamburger-margin-left);
   font-size: var(--nav-a-font-size);
   text-align: left;
   width: 100%;
   transform-origin: top;
   transition: transform 250ms ease-in-out;
-  // margin-top: $nav-item-margin-bottom !important;
   margin-top: var(--nav-item-margin-bottom) !important;
   padding: 0;
   list-style: none;
@@ -167,6 +154,7 @@ nav {
 
   .header-div {
     display: grid;
+    padding: 1% 7%;
     grid-template-columns: 0.25fr auto minmax(600px, 1fr) 0.75fr;
   }
 
@@ -191,10 +179,6 @@ nav {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-
-    // ul {
-    //   border: 1px solid red;
-    // }
 
     li {
       position: relative;
@@ -223,15 +207,12 @@ nav {
   }
 
   .navbar-goto-li-ul {
-    border: 1px solid red;
     position: relative;
     text-align: right;
     background-color: var(--nav-background);
     position: absolute;
     right: -55%;
-    // width: 400px;
     width: auto;
-    // width: fit-content(20em);
     text-align: right;
     transform: scale(1, 0);
     transform-origin: top;
@@ -240,6 +221,7 @@ nav {
 
 
     li {
+      border: 1px solid red;
       margin-right: 1em;
     }
 
