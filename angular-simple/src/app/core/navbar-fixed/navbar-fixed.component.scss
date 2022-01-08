@@ -199,6 +199,10 @@ nav {
     font-size: var(--nav-a-font-size);
   }
 
+  .goto-toggle-label:hover {
+    color: #000;
+  }
+
   .navbar-goto-li-angle-down {
     color: white;
     // position: absolute;
