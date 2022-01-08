@@ -1,4 +1,4 @@
-@import '/src/assets/scss/_variables.scss';
+// @import '/src/assets/scss/_variables.scss';
 
 * {
   margin: 0;
@@ -11,7 +11,8 @@
 
 // 01: Global variables are defined in '/src/assets/scss/_variables.scss'
 .header-div {
-  background: $nav-background;
+  // background: $nav-background;
+  background: var(--nav-background);
   text-align: center;
   position: fixed;
   z-index: 999;
@@ -26,7 +27,8 @@
   position: absolute;
   top: 0;
   left: 0;
-  margin-left: $hamburger-margin-left;
+  // margin-left: $hamburger-margin-left;
+  margin-left: var(--hamburger-margin-left);
   height: 100%;
   display: flex;
   align-items: center;
@@ -62,7 +64,8 @@ nav {
   text-align: left;
   top: 100%;
   left: 0;
-  background: $nav-background;
+  // background: $nav-background;
+  background: var(--nav-background);
   width: 100%;
   transform: scale(1, 0);
   transform-origin: top;
@@ -75,14 +78,17 @@ nav {
   }
 
   li {
-    margin-bottom: $nav-item-margin-bottom;
-    margin-left: $hamburger-margin-left;
+    // margin-bottom: $nav-item-margin-bottom;
+    // margin-left: $hamburger-margin-left;
+    margin-bottom: var(--nav-item-margin-bottom);
+    margin-left: var(--hamburger-margin-left);
   }
 
   a {
     color: white;
     text-decoration: none;
-    font-size: $nav-a-font-size;
+    // font-size: $nav-a-font-size;
+    font-size: var(--nav-a-font-size);
     text-transform: uppercase;
     opacity: 0;
     transition: opacity 150ms ease-in-out;
@@ -110,8 +116,8 @@ nav {
 
 .goto-toggle-label {
   color: white;
-  text-decoration: none;
-  font-size: $nav-a-font-size;
+  // text-decoration: none;
+  // font-size: $nav-a-font-size;
 }
 
 .navbar-goto-li-angle-down {
@@ -121,13 +127,16 @@ nav {
 
 .navbar-goto-li-ul {
   border: 1px solid yellow;
-  margin-left: $hamburger-margin-left;
-  font-size: $nav-a-font-size;
+  // margin-left: $hamburger-margin-left;
+  // font-size: $nav-a-font-size;
+  margin-left: var(--hamburger-margin-left);
+  font-size: var(--nav-a-font-size);
   text-align: left;
   width: 100%;
   transform-origin: top;
   transition: transform 250ms ease-in-out;
-  margin-top: $nav-item-margin-bottom !important;
+  // margin-top: $nav-item-margin-bottom !important;
+  margin-top: var(--nav-item-margin-bottom) !important;
   padding: 0;
   list-style: none;
   transform: scale(1, 0);
@@ -156,9 +165,9 @@ nav {
     display: none;
   }
 
-  header {
+  .header-div {
     display: grid;
-    grid-template-columns: 1fr auto minmax(600px, 1fr) 1fr;
+    grid-template-columns: 0.25fr auto minmax(600px, 1fr) 0.75fr;
   }
 
   .logo {
@@ -182,40 +191,61 @@ nav {
     display: flex;
     justify-content: flex-end;
     align-items: center;
+
+    ul {
+      border: 1px solid red;
+    }
+
+    li {
+      position: relative;
+      float: left;
+      margin-left: 3em;
+      margin-bottom: 0;
+    }
+
+    a {
+      opacity: 1;
+    }
+
   }
 
-  nav ul {
-    display: flex;
-    /* justify-content: flex-end; */
-    /* border: 1px solid red; */
-  }
+  // .navbar-goto-li-ul {
+  //   border: 1px solid red;
+  //   position: relative;
+  //   text-align: right;
 
-  nav li {
-    margin-left: 3em;
-    margin-bottom: 0;
-  }
+  //   .goto-toggle-label {
+  //     color: white;
+  //   }
 
-  nav a {
-    opacity: 1;
-    position: relative;
-  }
+  //   .navbar-goto-li-angle-down {
+  //     color: white;
+  //     position: absolute;
+  //     text-align: left;
+  //     margin-left: 10px;
+  //   }
 
-  nav a::before {
-    content: '';
+  //   .navbar-goto-li-ul {
+  //     // border: 1px solid red;
+  //     background-color: var(--nav-background);
+  //     position: absolute;
+  //     // top: 0;
+  //     right: -55%;
+  //     width: 300px;
+  //     text-align: right;
+  //     transform: scale(1, 0);
+  //     transform-origin: top;
+  //     transition: transform 2500ms ease-in-out;
+  //     display: none;
+  //   }
+
+  //   li {
+  //     margin-right: 1em;
+  //   }
+  // }
+
+  .goto-toggle:checked~ul {
     display: block;
-    height: 5px;
-    background-color: black;
-    position: absolute;
-    /* top: -.75em; */
-    bottom: -.75em;
-    left: 0;
-    right: 0;
-    transform: scale(0, 1);
-    transform-origin: left;
-    transition: transform ease-in-out 250ms;
-  }
-
-  nav a:hover:before {
     transform: scale(1, 1);
   }
 }
