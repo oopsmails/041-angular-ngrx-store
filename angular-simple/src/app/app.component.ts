@@ -4,6 +4,7 @@ import { Router } from "@angular/router";
 import { interval, Observable, Subject, combineLatest } from "rxjs";
 import { tap, takeWhile, takeUntil, switchMap, map } from "rxjs/operators";
 import { LOADING_STENCIL_ROUTES_URLS } from "./loading-stencil/loading-stencil.constants";
+import { faCoffee } from '@fortawesome/free-solid-svg-icons';
 
 enum TimerResult {
   COMPLETE,
@@ -27,6 +28,8 @@ export class AppComponent implements OnInit {
   notifier$: Observable<TimerResult> = this._notifier.asObservable();
 
   navRoutes: any = null;
+
+  faCoffee = faCoffee;
 
   constructor(
     private router: Router

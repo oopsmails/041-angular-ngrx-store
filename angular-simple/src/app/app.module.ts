@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClient, HttpClientModule } from '@angular/common/http'
-
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarFixedComponent } from './core/navbar-fixed/navbar-fixed.component';
@@ -28,6 +28,7 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     BrowserModule,
     FormsModule, 
     HttpClientModule,
+    FontAwesomeModule,
     
     LoadingStencilModule,
     AppRoutingModule

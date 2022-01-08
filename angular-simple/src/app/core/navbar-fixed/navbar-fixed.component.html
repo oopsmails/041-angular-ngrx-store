@@ -14,7 +14,10 @@
       <li *ngIf="includeSandbox">
         <input type="checkbox" id="goto-toggle" class="goto-toggle">
         <label for="goto-toggle" class="goto-toggle-label">
-          GOTO <i class="fas fa-angle-down navbar-goto-li-angle-down"></i>
+          GOTO
+          <!-- <i class="fa fa-angle-down navbar-goto-li-angle-down"></i> -->
+          <!-- <fa-icon [icon]="faCoffee"></fa-icon> -->
+          <fa-icon [icon]="faAngleDown"></fa-icon>
         </label>
         <ul class="navbar-goto-li-ul">
           <li><a routerLink="example/sc/login">Spring Clound Login</a></li>
