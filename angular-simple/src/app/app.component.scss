@@ -2,12 +2,15 @@
   // border: 1px solid red;
   position: relative;
   height: var(--nav-height);
+  z-index: -1000;
 }
 
 .mainContainer {
-  border: 1px solid red;
   position: relative;
-  top: 150px;
+  top: calc(var(--nav-height) + 10px);
+
+  padding-top: 20px; // for demo
+  border: 1px solid red;
   height: 200vh;
 }
 
