@@ -10,14 +10,19 @@
 .header-div {
   position: fixed;
   z-index: 1000;
+
+  display: grid;
+  padding: 0.75em 7%;
+  grid-template-columns: 0.25fr auto minmax(600px, 1fr) 0.75fr;
+
   top: 0;
   left: 0;
   right: 0;
   height: var(--nav-height);
   background: var(--nav-background);
   box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
-  padding: 0px 7%;
-  display: flex;
+  // padding: 0px 7%;
+  // display: flex;
   align-items: center;
   justify-content: space-between;
 
@@ -25,7 +30,12 @@
     font-weight: bolder;
     font-size: 25px;
     color: #333;
+    grid-column: 2 / span 1;
   }
+
+  // .logo {
+  //   grid-column: 2 / span 1;
+  // }
 
   .navbar {
     ul {
@@ -34,10 +44,11 @@
       li {
         position: relative;
         float: left;
+        margin-left: 3em;
 
         a {
           font-size: 20px;
-          padding: 20px;
+          // padding: 10px;
           color: #333;
           display: block;
         }
@@ -51,7 +62,7 @@
           position: absolute;
           left: 0;
           width: 200px;
-          background: #fff;
+          background: var(--nav-background);
           display: none;
 
           li {
@@ -93,7 +104,7 @@
   display: none;
 }
 
-// Smaller screen
+////////////////////// Smaller screen
 @media(max-width: 830px) {
   .header-div {
     padding: 20px;
