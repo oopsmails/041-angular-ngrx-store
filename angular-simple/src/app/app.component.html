@@ -1,20 +1,3 @@
-<p>
-  {{result}}
-</p>
-<button (click)="start()">start</button>
-<button (click)="end()">end</button>
-
-<p>
-  <span><b>Value emitted from child component is to Parent:</b></span>
-  
-  {{ valueEmittedFromChildComponent }}
-
-  <app-child (buttonClicked)="parentEventHandlerFunction($event)">
-  </app-child>
-</p>
-
-<button (click)="navToPage(navRoutes.LOADING_STENCIL_ROUTES_ROOT_SIMPLE)">Test Loading</button>
-
-<a routerLink="">routerLink home</a>
-
+<navbar-fixed></navbar-fixed>
+<div class="navbar-fix-place-holder"></div>
 <router-outlet></router-outlet>

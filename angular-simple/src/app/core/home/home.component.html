@@ -1,0 +1,30 @@
+<div class="mainContainer">
+    <p>
+    This is in 'div class="mainContainer"''. It is defined in
+    <span class="spanFileBackground">styles.scss</span>,
+    but overriden in <span class="spanFileBackground">home.component.scss</span>.
+    </p>
+
+    <p>
+        {{result}}
+    </p>
+    <button (click)="start()">start</button>
+    <button (click)="end()">end</button>
+
+    <div>
+        <fa-icon [icon]="faCoffee"></fa-icon>
+    </div>
+
+    <p>
+        <span><b>Value emitted from child component is to Parent:</b></span>
+
+        {{ valueEmittedFromChildComponent }}
+
+        <app-child (buttonClicked)="parentEventHandlerFunction($event)">
+        </app-child>
+    </p>
+
+    <button (click)="navToPage(navRoutes.LOADING_STENCIL_ROUTES_ROOT_SIMPLE)">Test Loading</button>
+
+    <a routerLink="">routerLink home</a>
+</div>
