@@ -7,9 +7,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
-  text-transform: capitalize;
-  text-decoration: none;
+  font-family: "Poppins", sans-serif;
 }
 
 html,
@@ -19,7 +17,7 @@ body {
 
 /* Global Variables */
 :root {
-  --nav-background: rgba(0, 214, 170, .85);
+  --primary-color: rgba(0, 214, 170, .85);
   --hamburger-margin-left: 1em;
   --nav-item-margin-bottom: 1em;
   --nav-a-font-size: 1.2rem;
@@ -29,8 +27,8 @@ body {
 .mainContainer {
   position: relative;
   // top: calc(var(--nav-height) + 10px);
-  top: 20px;
-  padding-top: 20px; // for demo
+  // top: 20px;
+  // padding-top: 20px; // for demo
   border: 1px solid red;
   height: 200vh;
 }

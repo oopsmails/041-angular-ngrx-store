@@ -9,7 +9,7 @@
 
 // 01: Global variables are defined in '/src/assets/scss/_variables.scss'
 .header-div {
-  background: var(--nav-background);
+  background: var(--primary-color);
   text-align: center;
   position: fixed;
   z-index: 999;
@@ -60,7 +60,7 @@ nav {
   text-align: left;
   top: 100%;
   left: 0;
-  background: var(--nav-background);
+  background: var(--primary-color);
   width: 100%;
   transform: scale(1, 0);
   transform-origin: top;
@@ -213,7 +213,7 @@ nav {
   .navbar-goto-li-ul {
     position: relative;
     text-align: right;
-    background-color: var(--nav-background);
+    background-color: var(--primary-color);
     position: absolute;
     right: -55%;
     width: auto;
