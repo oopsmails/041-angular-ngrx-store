@@ -37,12 +37,12 @@ export class HomeComponent implements OnInit {
   ) {}
   
   ngOnInit() {
-    console.log('########### in AppComponent, TRANSLATIONS_FR = \n' + JSON.stringify(TRANSLATIONS_FR));
+    console.log('########### in HomeComponent, TRANSLATIONS_FR = \n' + JSON.stringify(TRANSLATIONS_FR));
     this.navRoutes = LOADING_STENCIL_ROUTES_URLS;
   }
 
   navToPage(page) {
-    console.log('AppComponent, navToPage, page = ' + page);
+    console.log('HomeComponent, navToPage, page = ' + page);
     this.router.navigateByUrl(page);
   }
 
