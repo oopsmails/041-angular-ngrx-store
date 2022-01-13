@@ -2,12 +2,12 @@
 @import url('https://fonts.googleapis.com/css?family=Work+Sans:300,600');
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
 
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
+  // font-family: Arial, Helvetica, sans-serif;
 }
 
 html,
@@ -26,9 +26,11 @@ body {
 
 .mainContainer {
   position: relative;
+  padding: 5px;
+  
   // top: calc(var(--nav-height) + 10px);
   // top: 20px;
   // padding-top: 20px; // for demo
-  border: 1px solid red;
-  height: 200vh;
+  // border: 1px solid red;
+  // height: 200vh;
 }
