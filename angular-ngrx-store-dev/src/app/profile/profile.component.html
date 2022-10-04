@@ -1,1 +1,25 @@
 <p>profile works!</p>
+
+<!-- <div *ngFor="let profile of profiles$; trackBy: trackByFn | async">
+    {{ profile }}}
+</div> -->
+
+
+
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- <tr *ngFor="let item of store"> -->
+        <tr *ngFor="let item of store; trackBy: trackByFn">
+            <td>{{ item.id }}</td>
+            <td>{{ item.name }}</td>
+        </tr>
+    </tbody>
+</table>
+
+<button (click)="getNewData()">More Items</button>
